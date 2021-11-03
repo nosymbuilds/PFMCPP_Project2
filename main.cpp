@@ -98,18 +98,18 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  1)
  */
 void playPiano(char key = 'a', int note = 2)
- {
-     ignoreUnused(key, note);
- }
+{
+    ignoreUnused(key, note);
+}
 
 /*
  2)
  */
 int calculateTax(int netEarnings, int taxRate, bool exempt)
- {
-     ignoreUnused(netEarnings, taxRate, exempt);
-     return {};
- }
+{
+    ignoreUnused(netEarnings, taxRate, exempt);
+    return {};
+}
 
 /*
  3)
@@ -130,10 +130,10 @@ void speak(char language, bool localDialect)
  5)
  */
 int cook(int howManyIngredients, bool sourcedLocally)
- {
-     ignoreUnused(howManyIngredients, sourcedLocally);
-     return {};
- }
+{
+    ignoreUnused(howManyIngredients, sourcedLocally);
+    return {};
+}
 /*
  6)
  */
