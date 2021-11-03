@@ -97,7 +97,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
- void playSound(char key = 'a', int note = 2)
+ void playPiano(char key = 'a', int note = 2)
  {
      ignoreUnused(key, note);
  }
@@ -159,9 +159,9 @@ void learnCPP(double difficultyRating)
 /*
  9)
  */
-void exercise(int excercises, int reps, double weight)
+void exercise(int sets, int reps, double weight)
 {
-    ignoreUnused(excercises, reps, weight);
+    ignoreUnused(sets, reps, weight);
 }
 /*
  10)
@@ -191,7 +191,7 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    playSound('g', 3);
+    playPiano('g', 3);
     //2)
     auto calculatedTax = calculateTax(50000, 20, false);
     //3)
