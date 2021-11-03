@@ -16,14 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
- 
- 
+ int
+ double
+ float
+ bool
+ char
+ unsigned int
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
@@ -57,12 +55,32 @@ video: Chapter 2 - Part 3
 //2)
 void variableDeclarations()
 {
-    //example:
-    int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
+    int digit = 4;
+    int start = 0;
+    int end = 1;
+
+    double low = 0.0;
+    double high = 1.0;
+    double mid = 0.5;
+
+    float left = 0.f;
+    float right = 1.0f;
+    float center = 0.5f;
+
+    bool iWantToLearnCPP = true;
+    bool iAmTheNewStroustrup = false;
+    bool theWeatherIsNiceInEngland = false;
+
+    char firstLetter = 'a';
+    char lastLetter = 'z';
+    char randomLetter = 'j';
+
+    unsigned int width = 1000;
+    unsigned int length = 1200;
+    unsigned int diameter = 500;
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(digit, start, end, low, high, mid, left, right, center, iWantToLearnCPP, iAmTheNewStroustrup, theWeatherIsNiceInEngland, firstLetter, lastLetter, randomLetter, width, length, diameter); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -79,43 +97,80 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+void playPiano(char key = 'a', int note = 2)
+{
+    ignoreUnused(key, note);
+}
 
 /*
  2)
  */
+int calculateTax(int netEarnings, int taxRate, bool exempt)
+{
+    ignoreUnused(netEarnings, taxRate, exempt);
+    return {};
+}
 
 /*
  3)
  */
-
+int run(int distance = 5, float speed = 10.0f)
+{
+    ignoreUnused(distance, speed);
+    return {};
+}
 /*
  4)
  */
-
+void speak(char language, bool localDialect)
+{
+    ignoreUnused(language, localDialect);
+}
 /*
  5)
  */
-
+int cook(int howManyIngredients, bool sourcedLocally)
+{
+    ignoreUnused(howManyIngredients, sourcedLocally);
+    return {};
+}
 /*
  6)
  */
-
+void shop(double spendingBudget)
+{
+    ignoreUnused(spendingBudget);
+}
 /*
  7)
  */
-
+bool sleep(double hoursSlept = 7.5) 
+{
+    ignoreUnused(hoursSlept);
+    return {};
+}
 /*
  8)
  */
-
+void learnCPP(double difficultyRating)
+{
+    ignoreUnused(difficultyRating);
+}
 /*
  9)
  */
-
+void exercise(int sets, int reps, double weight)
+{
+    ignoreUnused(sets, reps, weight);
+}
 /*
  10)
  */
-
+char createFunction(int quantity = 10, bool completed = true)
+{
+    ignoreUnused(quantity, completed);
+    return {};
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -136,27 +191,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    playPiano('g', 3);
     //2)
-    
+    auto calculatedTax = calculateTax(50000, 20, false);
     //3)
-    
+    auto runTime = run(10, 5.6f);
     //4)
-    
+    speak('e', true);
     //5)
-    
+    auto dinner  = cook(10, true);
     //6)
-    
+    shop(100.50);
     //7)
-    
+    auto slept = sleep(6.2);
     //8)
-    
+    learnCPP(9.9);
     //9)
-    
+    exercise(10, 15, 7.5);
     //10)
+    auto functions = createFunction(10, true);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, calculatedTax, runTime, dinner, slept, functions);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
