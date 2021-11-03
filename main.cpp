@@ -97,7 +97,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
- void playPiano(char key = 'a', int note = 2)
+void playPiano(char key = 'a', int note = 2)
  {
      ignoreUnused(key, note);
  }
@@ -105,7 +105,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  2)
  */
-  int calculateTax(int netEarnings, int taxRate, bool exempt)
+int calculateTax(int netEarnings, int taxRate, bool exempt)
  {
      ignoreUnused(netEarnings, taxRate, exempt);
      return {};
@@ -129,7 +129,7 @@ void speak(char language, bool localDialect)
 /*
  5)
  */
-  int cook(int howManyIngredients, bool sourcedLocally)
+int cook(int howManyIngredients, bool sourcedLocally)
  {
      ignoreUnused(howManyIngredients, sourcedLocally);
      return {};
